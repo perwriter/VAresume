@@ -1,266 +1,385 @@
 <!DOCTYPE html>
 <html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Kimiri Peter Macharia Resume</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+    />
+     <!-- Load Inter font from Google Fonts -->
+     <link rel="preconnect" href="https://fonts.googleapis.com" />
+     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+     <link
+       href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap"
+       rel="stylesheet"
+     />
+    <style>
+              body {
+        font-family: 'Inter', sans-serif;
+      }
+      body.dark-mode {
+        background-color: black;
+        color: white;
+      }
+      body.dark-mode .text-orange-500 {
+        color: #fb923c;
+      }
+      body.dark-mode .text-gray-600 {
+        color: #9ca3af;
+      }
+    </style>
+  </head>
+  <body class="bg-white text-black font-inter">
+    <div class="container mx-auto p-6 max-w-5xl">
+      <!-- Dark Mode Toggle -->
+      <button
+        id="darkModeToggle"
+        class="fixed top-4 right-4 bg-orange-500 text-white px-3 py-2 rounded-full shadow"
+      >
+        <i class="fas fa-moon"></i>
+      </button>
 
-<head>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>VA Resume</title>
-  <script src="https://unpkg.com/feather-icons"></script>
-  <link rel="stylesheet" href="style.css">
-  <link rel="icon" type="image" href="passportphoto.png">
-  <!-- Add the html2pdf library -->
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.9.2/html2pdf.bundle.min.js"></script>
-</head>
-
-<body>
-  <div id="resume-content" class="container">
-    <div class="profile">
-      <div class="profile_container">
-        <div class="profile_profileImg">
-<!--           <img onclick="printDocument()" src="./passportphoto.png" alt="Peter Macharia"> -->
-        </div>
+      <!-- Header Section -->
+      <header class="border-b border-gray-300 pb-6 mb-6">
+        <div class="flex">
+            <div class="flex justify-center items-center">
+                <!-- <img 
+                  onclick="printDocument()" 
+                  src="https://tech.perwriters.com/_next/image?url=%2Fpassport.png&w=1920&q=75" 
+                  alt="Peter Macharia" 
+                  class="w-1200 h-240 rounded-full object-cover shadow-lg cursor-pointer"
+                /> -->
+              </div>
+              
         <div>
-          <h1 onclick="printDocument()" style={"cursor:pointer"} class="profile_name">
-            <span class="profile_name_lastName">KIMIRI</span>
-            <span class="profile_name_firstName">PETER <span>MACHARIA</span> 
-<!--               <span>Macharia</span> -->
-            </span>
-          </h1>
-<!--           <p class="profile_title"><span>Project manager</span>, <span>Assistant</span>, <span>Web Developer</span>,  <span>Industrial Chemist</span>,</p> -->
-                  <p class="description profile_description">
-           Results-driven professional with 5+ years of experience spanning project management, administrative support, operations assistance, industrial chemistry, and web development. I excel in quality control, process optimization, and time management, ensuring efficient and timely project completion. My strong leadership skills, coupled with critical and creative thinking, drive innovative solutions that consistently meet or exceed expectations</div>
-      </div>
+        <h1 class="text-8xl text-orange-500 font-semibold">KIMIRI</h1>
+        <p class="text-6xl font-thin">PETER MACHARIA</p>
+        <p class="text-lg mt-4 leading-relaxed">
+          Results-driven professional with 5+ years of experience spanning
+          project management, administrative support, operations assistance,
+          industrial chemistry, and web development. I excel in quality control,
+          process optimization, and time management, ensuring efficient and
+          timely project completion. My strong leadership skills, coupled with
+          critical and creative thinking, drive innovative solutions that
+          consistently meet or exceed expectations.
+        </p>
     </div>
 
-    <div class="group-2">
-
-
-      <div class="exp">
-        <h3 class="title">Work Experience</h3>
-        <div class="exp_item">
-          <p class="item_preTitle">2019 Jan - 2023 Jan</p>
-          <h4 class="item_title">General Manager</h4>
-          <p class="description">
-          <ul class="description">
-  <li>Cordinated some not less than 5 freelance writers, optimizing workflow and monitoring quality of work done.</li>
-  <li>Ensured Work was free from Plagiarism and was 100% original.</li>
-  <li>Tracked work done payment processing and invoicing to clients </li>
-  <li>Helped with Email management </li>
-
-
-           
-          </p>
-
-          </p>
-        </div>
-        <div class="exp_item">
-          <p class="item_preTitle">2023 Jan - present</p>
-          <h4 class="item_title">Part Time Web developer</h4>
-          <p class="description">
-            Have been working as web developer on freelance platform doing short term projects;
-            https://github.com/perwriter
-
-          </p>
-        </div>
-        <div class="exp_item">
-          <p class="item_preTitle">2019 Jan - present</p>
-          <h4 class="item_title">Part Time virtual Assistant</h4>
-          <p class="description">
-            Have been working as VA for both short term and long term projects; 
-            <span class="item_preTitle">(General manager)Freelance writer</span>, 
-            <span class="item_preTitle">Transcription </span>, 
-            <span class="item_preTitle">Lead Generation</span>, 
-            <span class="item_preTitle">Email management</span>, 
-            <span class="item_preTitle">Data scraping</span>, 
-            <span class="item_preTitle">Project supervisor</span>, 
-            <span class="item_preTitle">Sales Rep.</span>, 
-            <span class="item_preTitle">Appointment Setter</span>. 
-            
-          </p>
-        </div>
-        <div class="exp_item">
-          <p class="item_preTitle">2024 Jan - 2024 April</p>
-          <h4 class="item_title">Project Manager</h4>
-          <p class="description">
-            Contracted to find, train, supervise and track time for a team of video editors for their payment
-          </p>
-        </div>
-      </div>
-      <div class="awards">
-        <h3 class="title">Industrial Experience</h3>
-        <div class="awards_item">
-          <p class="item_preTitle">2022 August - December 2022</p>
-          <h4 class="item_title">Njoro Canning Factory</h4>
-          <p class="description">
-            Did my Internship in a food processing factory whose aim is to increase food shelf life and also make spices to flavor the food.
-          </p>
-        </div>
-        <!-- <div class="awards_item">
-          <p class="item_preTitle">2023 May - November 2023</p>
-          <h4 class="item_title">Freezing Factory manager(Njoro Canning) </h4>
+      
+</div>
+      </header>
+      <div class="flex">
+        <!-- right  -->
+        <div class="flex-1">
+          <!-- Work Experience Section -->
+          <section class="mb-10">
+            <h2 class="text-xl font-bold uppercase text-orange-500 mb-4">
+              Work Experience
+            </h2>
+            <div class="space-y-6">
+              <div>
+                <h3 class="text-xl font-semibold">General Manager</h3>
+                <p class="text-gray-600">2019 Jan - 2023 Jan</p>
+                <ul class="list-disc list-inside mt-2">
+                  <li>
+                    Coordinated some writers, not less than 5 freelance writers,
+                    optimizing workflow and monitoring quality of work done.
+                  </li>
+                  <li>
+                    Ensured work was free from plagiarism and was 100% original.
+                  </li>
+                  <li>
+                    Tracked work done, payment processing, and invoicing to
+                    clients.
+                  </li>
+                  <li>Helped with email management.</li>
+                </ul>
+              </div>
+              <div>
+                <h3 class="text-xl font-semibold">Part Time Web Developer</h3>
+                <p class="text-gray-600">2023 Jan - Present</p>
+                <p class="">
+                  Have been working as a web developer on freelance platforms
+                  doing short-term projects: <br />
+                  <a
+                    href="https://github.com/perwriter"
+                    class="text-orange-500 underline"
+                    >github.com/perwriter</a
+                  ><br />
+                  <a
+                    href="https://tech.perwriters.com/"
+                    class="text-orange-500 underline"
+                    >Tech Portfolio</a
+                  >
+                </p>
+              </div>
+              <div>
+                <h3 class="text-xl font-semibold">
+                  Part Time Virtual Assistant
+                </h3>
+                <p class="text-gray-600">2019 Jan - Present</p>
+                <p class="">
+                  Have been working as VA for both short term and long term
+                  projects; (General manager)Freelance writer, Transcription ,
+                  Lead Generation, Email management, Data scraping, Project
+                  supervisor, Sales Rep., Appointment Setter..
+                </p>
+              </div>
+              <div>
+                <h3 class="text-xl font-semibold">Project Manager</h3>
+                <p class="text-gray-600">2024 Jan - 2024 Apr</p>
+                <p class="">
+                  Contracted to find, train, supervise and track time for a team
+                  of video editors for their payment
+                </p>
+              </div>
+            </div>
+          </section>
+          <section class="mb-10">
+            <h2 class="text-xl uppercase font-bold text-orange-500 mb-4">
+              Industrial Experience
+            </h2>
+            <div class="space-y-6">
+              <div>
+                <p class="text-gray-600">2022 August -December 2023</p>
+                <h3 class="text-xl font-semibold">Njoro Canning Factory</h3>
+                <ul class="list-disc list-inside mt-2">
+                  Did my Internship in a food processing factory whose aim is to
+                  increase food shelf life and also make spices to flavor the
+                  food.
+                </ul>
+              </div>
+            </div>
+          </section>
+          <!-- Education Section -->
+          <section class="mb-10">
+            <h2 class="text-xl font-bold text-orange-500 uppercase mb-4">Education</h2>
+            <div class="space-y-4">
+              <div>
+                <h3 class="text-xl font-semibold">
+                  BSc. Industrial Chemistry with Management
+                </h3>
+                <p class="text-gray-600">2018 - 2023</p>
+                <p>Kenyatta University</p>
+              </div>
+              <div>
+                <h3 class="text-xl font-semibold">
+                  Certificate in Web Design and Development
+                </h3>
+                <p class="text-gray-600">2018 Mar - 2018 Aug</p>
+                <p>Tracom College</p>
+              </div>
+              <div>
+                <h3 class="text-xl font-semibold">
+                  Certificate in Responsive Web Design
+                </h3>
+                <p class="text-gray-600">2023 May - 2023 Jun</p>
+                <p>FreeCodeCamp</p>
+              </div>
+              <div>
+                <h3 class="text-xl font-semibold">ALx Software Engineering</h3>
+                <p class="text-gray-600">2024 Mar - Present</p>
+                <p>ALX; Major Backend</p>
+              </div>
+            </div>
+          </section>
+          <div class="interest mb-8">
+            <h3 class="text-xl font-bold uppercase text-orange-500 dark:text-white mb-4">Interest</h3>
+            <div class="flex gap-2 items-center">
+              <div class="flex items-center gap-2  p-3 rounded shadow">
+                <i class="fas fa-music text-orange-500 text-xl"></i> <!-- Add an appropriate icon here -->
+                <span class=" font-medium">Music</span>
+              </div>
+              <div class="flex items-center gap-2  p-3 rounded shadow">
+                <i class="fas fa-search text-orange-500 text-xl"></i> <!-- Add an appropriate icon here -->
+                <span class=" font-medium">Research</span>
+              </div>
+              <div class="flex items-center gap-2  p-3 rounded shadow">
+                <i class="fas fa-book text-orange-500 text-xl"></i> <!-- Add an appropriate icon here -->
+                <span class=" font-medium">Reading</span>
+              </div>
+              <div class="flex items-center gap-2  p-3 rounded shadow">
+                <i class="fas fa-map text-orange-500 text-xl"></i> <!-- Add an appropriate icon here -->
+                <span class=" font-medium">Travel</span>
+              </div>
+            </div>
+          </div>
           
-            <ul class="description">
-  <li>Managed operations in the Freezing Process factory, optimizing workflow and monitoring quality control protocols.</li>
-  <li>Ensured temperature and storage processes met strict standards for food safety and product integrity.</li>
-  <li>Directed a team in daily operations, training new employees on quality measures, and overseeing production deadlines.</li>
 
+        </div>
 
+        <!-- left  -->
+        <div class="flex-1 pl-6">
+          <!-- Expertise Section -->
+          <section class="mb-10">
+            <h2 class="text-xl font-bold text-orange-500 uppercase mb-4">Expertise</h2>
+            <div class="grid grid-cols-1 gap-6">
+              <div>
+                <h3 class="text-lg font-semibold">Web Development</h3>
+                <p>
+                  React.js, HTML, CSS, Vanilla.js, Nodejs, Wix, WordPress Next.js, MySQL, Postgres,
+                  Python, Tailwind...
+                </p>
+              </div>
+              <div>
+                <h3 class="text-lg font-semibold">Content Management System (CMS)</h3>
+                <p>
+                  WordPress, Sanity, Kajabi, Strapi, Hygraph, Custom made CMS...
+                </p>
+              </div>
+              <div>
+                <h3 class="text-lg font-semibold">Microsoft Office Tools</h3>
+                <p>Excel, Word, PowerPoint...</p>
+              </div>
+              <div>
+                <h3 class="text-lg font-semibold">Google Workspace</h3>
+                <p>Spreadsheet, Docs, Slides...</p>
+              </div>
+              <div>
+                <h3 class="text-lg font-semibold">CRM Software</h3>
+                <p>Trello, Notion, Hubstaff, Google Spreadsheet, Airtable...</p>
+              </div>
+              <div>
+                <h3 class="text-lg font-semibold">Conferencing Tools</h3>
+                <p>Zoom, Google Meet, Skype, WhatsApp...</p>
+              </div>
+              <div>
+                <h3 class="text-lg font-semibold">Email Management</h3>
+                <p>Efficient email handling and organization.</p>
+              </div>
+              <div>
+                <h3 class="text-lg font-semibold">Process Optimization</h3>
+                <p>Streamlining workflows for efficiency.</p>
+              </div>
+              <div>
+                <h3 class="text-lg font-semibold">Team Leadership</h3>
+                <p>Guiding teams to achieve objectives effectively.</p>
+              </div>
+              <div>
+                <h3 class="text-lg font-semibold">Marketing</h3>
+                <p>Strategic planning and campaign execution.</p>
+              </div>
+              <div>
+                <h3 class="text-lg font-semibold">Sales Coordination</h3>
+                <p>Organizing and managing sales efforts.</p>
+              </div>
+              <div>
+                <h3 class="text-lg font-semibold">Market Analysis</h3>
+                <p>Researching and interpreting market trends.</p>
+              </div>
+              <div>
+                <h3 class="text-lg font-semibold">Production Management</h3>
+                <p>Overseeing production processes and quality assurance.</p>
+              </div>
+            </div>
+          </section>
+
+          <!-- Certifications Section -->
+          <section class="mb-10">
+            <h2 class="text-xl uppercase font-bold text-orange-500 mb-4">
+              Certifications
+            </h2>
+            <div class="space-y-4">
+              <div>
+                <h3 class="text-xl font-semibold">Frontend Developer</h3>
+                <p class="text-gray-600">2018</p>
+                <p>FreeCodeCamp</p>
+              </div>
+              <div>
+                <h3 class="text-xl font-semibold">Leadership</h3>
+                <p class="text-gray-600">2022</p>
+                <p>Kenyatta University Program</p>
+              </div>
+            </div>
+          </section>
+
+          <!-- Languages  -->
+          <div class="interest">
+            <h3 class="text-xl font-bold uppercase text-orange-500 mb-4">Languages</h3>
+            <div class="flex gap-2">
+              <div class="p-3 ">
+                  <span class=" font-medium">Kikuyu</span>
+                </div>
+                <div class=" p-3 ">
+                    <span class="font-medium">Swahili</span>
+                </div>
+                <div class=" p-3 ">
+                  <span class=" font-medium">English</span>
+              </div>
+            </div>
+          </div>
+        
+        </div>
+        
+      </div>
            
+
+      <!-- Contact & Socials -->
+      <div class="flex border-t border-gray-300 justify-between pt-6 mb-10">
+        <section>
+          <h2 class="text-xl font-bold text-orange-500 uppercase mb-4">Contact</h2>
+          <p class="py-2"><i class="pr-2 fas fa-map-marker-alt"></i> Nairobi, Kenya</p>
+          <p class="py-2"><i class="pr-2 fas fa-phone"></i> +254715990719</p>
+          <p class="py-2"><i class="pr-2 fas fa-phone"></i> +254735005251</p>
+          <p class="py-2"><i class="pr-2 fas fa-envelope"></i> petermacharia862@gmail.com</p>
+        </section>
+
+        <section class="gap-8">
+          <h2 class="text-xl font-bold text-orange-500 uppercase mb-4">Socials</h2>
+          <p class="py-2">
+            <a
+              href="https://github.com/perwriter"
+              target="_blank"
+              rel="noopener noreferrer"
+              ><i class="fab fa-github pr-2"></i> @perwriter</a
+            >
           </p>
-        </div> -->
-      </div>
-      
-      
-      
-      <div class="interest">
-        <h3 class="title">Interest</h3>
-        <div class="interest_items">
-          <div class="interest_item">
-            <i data-feather="music"></i>
-            <span>Music</span>
-          </div>
-          <div class="interest_item">
-            <i data-feather="search"></i>
-            <span>Research</span>
-          </div>
-          <div class="interest_item">
-            <i data-feather="book"></i>
-            <span>Books</span>
-          </div>
-          <div class="interest_item">
-            <i data-feather="map"></i>
-            <span>Travel</span>
-          </div>
-        </div>
-      </div>
-
-      <div class="interest">
-        <h3 class="title">Languages</h3>
-        <div class="interest_items">
-          <div class="interest_item item_title">
-            <span>English</span>
-          </div>
-          <div class="interest_item item_title">
-            <span>Swahili</span>
-          </div>
-          <div class="interest_item item_title">
-            <span>Kikuyu</span>
-          </div>
-        </div>
-      </div>
-
-    </div>
-    <div class="group-1">
-      <div class="skills">
-        <h3 class="title">Expertise</h3>
-        <ul class="skills_list description">
-          
-          <li>Web Development: Reactjs, HTML, CSS, Vanillajs, Nextjs, Mysql, Postgres, Python, Tailwind, ...</li>
-          <li>CMS; Wordpress, Sanity, Kajabi, Strapi, hygraph Custom made cms...</li>
-          <li>Microsoft Office Tools; {excel, ms word, powerpoint...}</li>
-          <li>Google workspace{spreadsheet, docs, slides...}</li>
-          <li>CRM softwares; {Trello, Notion, Hubstaff, Google spreadsheet, airtable, ...}</li>
-          <li>Conferencing; {Zoom, Google Meet, WhatsApp, Skype, ...}</li>
-          <li>Email Management</li>
-          <li>Process Optimization</li>
-          <li>Team Leadership</li>
-          <li>Marketing</li>
-          <li>Sales Coordination</li>
-          <li>Market Analysis</li>
-          <li>Production Management</li>
-          <!-- <li>Quality Control</li> -->
-        </ul>
-      </div>
-
-      <div class="edu">
-        <h3 class="title">Education</h3>
-        <div class="edu_item">
-          <p class="item_preTitle">2018 - 2023</p>
-          <h4 class="item_title">Bsc. Industrial Chemistry with Management</h4>
-          <p class="item_subtitle">Kenyatta University</p>
-        </div>
-        <div class="edu_item">
-          <p class="item_preTitle">2018 March - 2018 August</p>
-          <h4 class="item_title">Cert. Web Design and Development</h4>
-          <p class="item_subtitle">Tracom College</p>
-        </div>
-        <div class="edu_item">
-          <p class="item_preTitle">2023 May - 2023 June</p>
-          <h4 class="item_title">Certificate in Responsive Web Design</h4>
-          <p class="item_subtitle">FreeCodeCamp</p>
-        </div>
-        <div class="edu_item">
-          <p class="item_preTitle">2024 March - Present</p>
-          <h4 class="item_title">ALx Software Engineering</h4>
-          <p class="item_subtitle">ALX; Major Backend</p>
-        </div>
-      </div>
-
-      <div class="certification">
-        <h3 class="title">Certification</h3>
-        <div class="certification_item">
-          <p class="item_preTitle">2018</p>
-          <h4 class="item_title">Frontend Developer</h4>
-          <p class="description">FreeCodeCamp Free Course.</p>
-        </div>
-        <div class="certification_item">
-          <p class="item_preTitle">2022</p>
-          <h4 class="item_title">Leadership</h4>
-          <p class="description">Kenyatta University Program</p>
-        </div>
+          <p class="py-2">
+            <a
+              href="https://twitter.com/petermasharia"
+              target="_blank"
+              rel="noopener noreferrer"
+              ><i class="fab fa-twitter pr-2"></i> @petermasharia</a
+            >
+          </p>
+          <p class="py-2">
+            <a
+              href="https://www.linkedin.com/in/kimiri-peter-macharia"
+              target="_blank"
+              rel="noopener noreferrer"
+              ><i class="fab fa-linkedin pr-2"></i> @kimiri-peter-macharia</a
+            >
+          </p>
+        </section>
       </div>
     </div>
-    <hr>
-    <div class="group-3">
-      <div class="contact">
-        <h3 class="title">Contact</h3>
-        <div class="contact_info">
-          <p class="description">Nairobi, Kenya</p>
-          <p class="description">+254715990719</p>
-          <p class="description">+254735005251</p>
-          <p class="description">petermacharia862@gmail.com</p>
-        </div>
-      </div>
-      <div class="social">
-        <h3 class="title">Socials</h3>
-        <div class="social_items">
-          <!-- <a href="https://virtualassistant.perwriters.com/" target="_b" class="social_item">
-            <i data-feather="chrome"></i>
-            <span>virtualassistant.perwriters.com</span>
-          </a> -->
-          <a href="https://github.com/perwriter" target="_b" class="social_item">
-            <i data-feather="github"></i>
-            <span>@perwriters</span>
-          </a>
-          <a href="https://twitter.com/petermasharia" target="_blank" class="social_item">
-            <i data-feather="twitter"></i>
-            <span>@petermasharia</span>
-          </a>
-          <a href="https://www.linkedin.com/in/peter-macharia-90a715187/" target="_blank" class="social_item">
-            <i data-feather="linkedin"></i>
-            <span>@kimiri-peter-macharia</span>
-          </a>
-        </div>
-      </div>
-    </div>
-  </div>
- 
- <script>
-  feather.replace();
 
-  // Function to print the page as PDF using html2pdf.js
-  function printDocument() {
-    const element = document.getElementById('resume-content');
-    const options = {
-      filename: 'Kimiri_Peter_Macharia_Resume.pdf',
-      image: { type: 'jpeg', quality: 0.98 },
-      html2canvas: { scale: 2 },
-      jsPDF: { unit: 'in', format: 'letter', orientation: 'portrait' }
-    };
-    html2pdf().set(options).from(element).save();
-  }
-</script>
-</body>
-
-</html>
+    <script>
+        const darkModeToggle = document.getElementById("darkModeToggle");
+        const body = document.body;
+  
+        // Check and apply the user's preferred mode from localStorage
+        if (localStorage.getItem("dark-mode") === "enabled") {
+          body.classList.add("dark-mode");
+        }
+  
+        darkModeToggle.addEventListener("click", () => {
+          if (body.classList.contains("dark-mode")) {
+            body.classList.remove("dark-mode");
+            localStorage.setItem("dark-mode", "disabled"); // Save preference
+          } else {
+            body.classList.add("dark-mode");
+            localStorage.setItem("dark-mode", "enabled"); // Save preference
+          }
+        });
+  
+        // Function to print the resume
+        function printResume() {
+          window.print();
+        }
+      </script>
+    </body>
+  </html>
